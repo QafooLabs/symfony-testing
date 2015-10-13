@@ -2,23 +2,23 @@
 
 namespace AppBundle\Tests\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class MinkTest extends KernelTestCase
+class MinkTest extends WebTestCase
 {
     private $session;
 
     public function setUp()
     {
-        $this->baseUrl = 'http://localhost:8000';
+        $client = self::createClient();
 
-        $driver = new \Behat\Mink\Driver\GoutteDriver();
+        $driver = new \Behat\Mink\Driver\BrowserKitDriver($client);
         $this->session = new \Behat\Mink\Session($driver);
     }
 
     public function testIndex()
     {
-        $this->session->visit($this->baseUrl . '/');
+        $this->session->visit('/');
         $content = $this->session->getPage()->getContent();
 
         $this->assertContains('Welcome to Symfony', strip_tags($content));
