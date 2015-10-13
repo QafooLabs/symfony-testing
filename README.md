@@ -57,8 +57,8 @@ Symfony BrowserKit API
 | `$client->getResponse()`          | Access to the last response.          |
 | `$client->click(Link $link)`      | Go to the page of the passed `Link`   |
 | `$client->submit(Form $form)`     | Send form data to page in `Form`      |
-| `$client->followRedirects($flag)  | Follow redirects automatically now    |
-| `$client->followRedirect()        | Follow redirect of current response   |
+| `$client->followRedirects($flag)` | Follow redirects automatically now    |
+| `$client->followRedirect()`       | Follow redirect of current response   |
 
 Symfony Browser Client::request() Parameters
 --------------------------------------------
@@ -77,15 +77,15 @@ Symfony DomCrawler API
 
 The `Client::request()` method returns a `Crawler` instance with the following methods:
 
-| Method                        | Description                                       |
-|-------------------------------|---------------------------------------------------|
-| `$crawler->filter($css)       | Return a new crawler with nodes matching selector |
-| `$crawler->filterXpath($xpath)| Return a new crawler with nodes matching XPath    |
-| `$crawler->html()`            | Return the HTML of all children                   |
-| `$crawler->text()`            | Return the Text of all children (DOM nodeValue)   |
-| `$crawler->attr($name)`       | Return the attribute value of the first node      |
-| `$crawler->selectLink($name)`  | Selects links by name or alt value for clickable images. |
-| `$crawler->selectButton($name)`| Selects a button by name or alt value for images. |
+| Method                            | Description                                       |
+|-----------------------------------|---------------------------------------------------|
+| `$crawler->filter($css)`          | Return a new crawler with nodes matching selector |
+| `$crawler->filterXpath($xpath)`   | Return a new crawler with nodes matching XPath    |
+| `$crawler->html()`                | Return the HTML of all children                   |
+| `$crawler->text()`                | Return the Text of all children (DOM nodeValue)   |
+| `$crawler->attr($name)`           | Return the attribute value of the first node      |
+| `$crawler->selectLink($name)`     | Selects links by name or alt value for clickable images. |
+| `$crawler->selectButton($name)`   | Selects a button by name or alt value for images. |
 
 Mink Session API
 ----------------
