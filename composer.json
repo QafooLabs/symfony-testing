@@ -25,7 +25,8 @@
         "behat/symfony2-extension": "^2.1",
         "behat/mink": "^1.7",
         "behat/mink-extension": "^2.1",
-        "behat/mink-browserkit-driver": "^1.3"
+        "behat/mink-browserkit-driver": "^1.3",
+        "behat/mink-sahi-driver": "^1.2"
     },
     "scripts": {
         "post-install-cmd": [
