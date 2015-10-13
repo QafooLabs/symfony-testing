@@ -37,3 +37,27 @@ Run PHPUnit
 Run Behat
 
     php bin/behat
+
+PHPUnit Assertions API
+----------------------
+
+| Method                                                    | Description                              |
+|-----------------------------------------------------------|------------------------------------------|
+| $this->assertEquals($expected, $actual)                   | Compare two values with PHPs == operator |
+| $this->assertSame($expected, $actual)                     | Compare two values with PHPs === operator|
+| $this->assertContains($haystack, $needle)                 | Check if a string contains substring     |
+| $this->assertCount($expectedCount, $arrayOrCountable)     | Check size of array or Countable         |
+
+Mink Session API
+----------------
+
+| Method                                                    | Description                               |
+|-----------------------------------------------------------|-------------------------------------------|
+| $session->getPage()->visit($url)                          | Visit the page with given url.            |
+| $session->getPage()->getContent()                         | Return response body of last visited page.|
+| $session->getPage()->clickLink($locator)                  | Click Link (will visit page)              |
+| $session->getPage()->pressButton($locator)                | Press the selected button                 |
+| $session->getPage()->fillField($locator, $value)          | Fill input of a form                      |
+| $session->getPage()->checkField($locator)                 | Check a checkbox                          |
+| $session->getPage()->uncheckField($locator)               | Uncheck a checkbox                        |
+| $session->getPage()->selectFieldOption($locator, $value)  | Select an option                          |
