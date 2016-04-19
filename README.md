@@ -3,12 +3,12 @@ Symfony Testing Workshop
 
 Currently Using
 
-- Symfony ~2.7
-- Behat 3.0
-- PHPUnit 5
+- Symfony ~3.0
+- Behat 3.1
+- PHPUnit 4.8
 
-Installation from Composer
---------------------------
+Installation with Git
+---------------------
 
 Perform these steps in your shell:
 
@@ -20,12 +20,25 @@ Sometimes you need to generate a token for Github API, follow this docs:
 
 https://getcomposer.org/doc/articles/troubleshooting.md#api-rate-limit-and-oauth-tokens
 
-Installation from ZIP/Tarball
------------------------------
+Installation with ZIP
+---------------------
 
-1. Go to [Release page](https://github.com/QafooLabs/symfony-testing)
-2. Download latest ZIP or Tarball with Vendors
-3. Unzip the downloaded file, it will create a "symfony-testing" folder.
+[Download the latest ZIP](https://github.com/QafooLabs/symfony-testing/archive/master.zip) of the QafooLabs Symfony Testing repository.
+Unpack it into your workshop and rename the root directory to something less cryptic, for example just "symfony-testing".
+
+Then open your shell and call composer:
+
+    cd symfony-testing
+    composer install
+
+Verify it works
+---------------
+
+You can use the PHP builtin webserver to safe time configuring Apache or Nginx:
+
+    php app/console server:run
+
+Click on the URL it displays to see if the page works. If it does not, please send me an email [benjamin@qafoo.com](mailto:benjami@qafoo.com).
 
 Usage
 -----
