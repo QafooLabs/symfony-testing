@@ -14,6 +14,7 @@ class MinkTest extends WebTestCase
 
         $driver = new \Behat\Mink\Driver\BrowserKitDriver($client);
         $this->session = new \Behat\Mink\Session($driver);
+        $this->session->start();
     }
 
     public function testIndex()
