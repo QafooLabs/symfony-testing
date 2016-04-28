@@ -17,3 +17,9 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
+
+services:
+    test.client:
+        class: AppBundle\Tests\UsefulClient
+        arguments:
+            - "@kernel"
